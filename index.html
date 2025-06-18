@@ -79,7 +79,26 @@
         playRound(humanSelection,comphand);
         console.log(playRound(humanSelection,comphand));
 
+        const result = playRound(humanSelection,comphand)
+        console.log(result)
+
         //will have to add incrementation of scores based on round winner
+        function incrementScore(result) {
+            if (result.includes('You Win')) {++humanScore;}
+            else if(result.includes('You Lose')) {++computerScore;}
+        }
+        //Calls increment score function to actually increment
+        incrementScore(result);
+
+        console.log('User Score', humanScore);
+        console.log('Computer Score', computerScore);
+
+        //add round counter to allow for game loop to 5. add continue button keep playing through rounds
+        const round = humanScore + computerScore;
+
+        <button id='continueButton'>Continue Game</button>
+
+        function playGame = for (round = 0; round<=5, round++) {}
 
     </script>
 </body>
