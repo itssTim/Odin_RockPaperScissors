@@ -21,7 +21,7 @@
             Compare the user hand against computer hand
                 Rock > Scissor, Scissor > Paper, Paper > Rock 
                 and vice versa.
-            If relationship is former, print you Win! IF latter, print you lose!
+            If relationship is former, print you Win! IF latter, print You lose!
         Set button to restart and play again. */
 
         //Generates random integer for computer choice
@@ -52,9 +52,34 @@
         console.log(humanScore);
         console.log(computerScore);
 
-        //Single Round Logic
-        
+        /*Single Round Logic
+        Compare the user hand against computer hand
+                Rock > Scissor, Scissor > Paper, Paper > Rock 
+                and vice versa. */
+        function playRound (humanChoice, comphand) {
+            if (humanChoice === 'rock' && comphand === 'scissor') {
+                return'You win!';} 
+                else if (humanChoice === 'rock' && comphand === 'paper') {
+                return'You Lose!, Paper beats Rock';} 
+                else if (humanChoice === 'paper' && comphand === 'rock') {
+                return'You Win!';}
+                else if (humanChoice === 'paper' && comphand === 'scissor') {
+                return'You Lose!, Scissor beats Paper';}
+                else if (humanChoice === 'scissor' && comphand === 'paper') {
+                return'You Win!';}
+                else if (humanChoice === 'scissor' && comphand === 'rock') {
+                return'You Lose!, Rock beats Scissor';}
+                else if (humanChoice === comphand) {return 'Tie!';}  
+                else { return 'Invalid';};     
+        } 
 
+        const humanSelection = getHumanChoice.toLowerCase();
+        const computerSelection = comphand;
+        
+        playRound(humanSelection,comphand);
+        console.log(playRound(humanSelection,comphand));
+
+        //will have to add incrementation of scores based on round winner
 
     </script>
 </body>
