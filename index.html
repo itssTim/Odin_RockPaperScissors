@@ -25,7 +25,7 @@
         Set button to restart and play again. */
 
         
-        function playGame (round) {
+        function playGame () {
             //Score Variables Declaration
             let humanScore = 0;
             let computerScore = 0;
@@ -50,12 +50,9 @@
         //Get User Choice via prompt
         let getHumanChoice = prompt('What hand will you play?', );
         console.log(getHumanChoice);
-        //will have to add case insensitivity
- 
-
-        
-        console.log(humanScore);
-        console.log(computerScore);
+       
+        const humanSelection = getHumanChoice.toLowerCase();
+        const computerSelection = comphand;
 
         /*Single Round Logic
         Compare the user hand against computer hand
@@ -76,10 +73,7 @@
                 return'You Lose!, Rock beats Scissor';}
                 else if (humanChoice === comphand) {return 'Tie!';}  
                 else { return 'Invalid';};     
-        } 
-
-        const humanSelection = getHumanChoice.toLowerCase();
-        const computerSelection = comphand;
+        } ;
         
         playRound(humanSelection,comphand);
         console.log(playRound(humanSelection,comphand));
@@ -87,7 +81,7 @@
         const result = playRound(humanSelection,comphand)
         console.log(result)
 
-        //will have to add incrementation of scores based on round winner
+        //Incrementation Logic
         function incrementScore(result) {
             if (result.includes('You Win')) {++humanScore;}
             else if(result.includes('You Lose')) {++computerScore;}
@@ -98,8 +92,6 @@
         console.log('User Score', humanScore);
         console.log('Computer Score', computerScore);
 
-        //add round counter to allow for game loop to 5. add continue button keep playing through rounds
-        const round = humanScore + computerScore;
 
         }
     }
