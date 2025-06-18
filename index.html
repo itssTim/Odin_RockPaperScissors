@@ -22,6 +22,7 @@
         If relationship is former, print you Win! IF latter, print you lose!
         Set button to restart and play again. */
 
+        //Generates random integer for computer choice
         function getrandomInt (max) {
             return Math.floor(Math.random() * max);
         }
@@ -29,9 +30,14 @@
         let getComputerChoice = getrandomInt(3);
         console.log(getComputerChoice)
 
-   
-        
+        //assigns specific integers to be strings rock, paper, or scissor
+          let comphand = (getComputerChoice === 0) ? 'Rock' :
+            (getComputerChoice === 1) ? 'Paper' :
+            (getComputerChoice === 2) ? 'Scissor' : 
+            'error';
 
+            console.log(comphand)
+ 
 
     </script>
 </body>
