@@ -11,11 +11,11 @@
 
         /*Psuedocode
         Goal is to create a game played in the console
-        Randomly generate computer choice of rock paper or scissors and assign it as the hand value
+        Randomly generate computer choice of rock paper or scissor and assign it as the hand value
             Generate random integer
-            Assign specific integers to be rock, paper, or scissors
+            Assign specific integers to be rock, paper, or scissor
             Return the hand associated with the generated integer
-        Get user input on their choice of rock paper or scissors and assign it as user hand value
+        Get user input on their choice of rock paper or scissor and assign it as user hand value
         Declare score and track 
         Generate logic for single round
             Compare the user hand against computer hand
@@ -24,7 +24,14 @@
             If relationship is former, print you Win! IF latter, print You lose!
         Set button to restart and play again. */
 
-        //Generates random integer for computer choice
+        
+        function playGame (round) {
+            //Score Variables Declaration
+            let humanScore = 0;
+            let computerScore = 0;
+
+            for (round = 0; round < 5; round++) {
+            //Generates random integer for computer choice
         function getrandomInt (max) {
             return Math.floor(Math.random() * max);
         }
@@ -46,9 +53,7 @@
         //will have to add case insensitivity
  
 
-        //Score Variables Declaration
-        let humanScore = 0;
-        let computerScore = 0;
+        
         console.log(humanScore);
         console.log(computerScore);
 
@@ -96,9 +101,10 @@
         //add round counter to allow for game loop to 5. add continue button keep playing through rounds
         const round = humanScore + computerScore;
 
-        <button id='continueButton'>Continue Game</button>
-
-        function playGame = for (round = 0; round<=5, round++) {}
+        }
+    }
+    playGame()
+        
 
     </script>
 </body>
