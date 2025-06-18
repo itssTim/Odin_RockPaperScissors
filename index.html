@@ -16,10 +16,12 @@
             Assign specific integers to be rock, paper, or scissors
             Return the hand associated with the generated integer
         Get user input on their choice of rock paper or scissors and assign it as user hand value
-        Compare the user hand against computer hand
-            Rock > Scissor, Scissor > Paper, Paper > Rock 
-            and vice versa.
-        If relationship is former, print you Win! IF latter, print you lose!
+        Declare score and track 
+        Generate logic for single round
+            Compare the user hand against computer hand
+                Rock > Scissor, Scissor > Paper, Paper > Rock 
+                and vice versa.
+            If relationship is former, print you Win! IF latter, print you lose!
         Set button to restart and play again. */
 
         //Generates random integer for computer choice
@@ -31,13 +33,28 @@
         console.log(getComputerChoice)
 
         //assigns specific integers to be strings rock, paper, or scissor
-          let comphand = (getComputerChoice === 0) ? 'Rock' :
-            (getComputerChoice === 1) ? 'Paper' :
-            (getComputerChoice === 2) ? 'Scissor' : 
+          let comphand = (getComputerChoice === 0) ? 'rock' :
+            (getComputerChoice === 1) ? 'paper' :
+            (getComputerChoice === 2) ? 'scissor' : 
             'error';
 
-            console.log(comphand)
+            console.log(comphand);
+
+        //Get User Choice via prompt
+        let getHumanChoice = prompt('What hand will you play?', );
+        console.log(getHumanChoice);
+        //will have to add case insensitivity
  
+
+        //Score Variables Declaration
+        let humanScore = 0;
+        let computerScore = 0;
+        console.log(humanScore);
+        console.log(computerScore);
+
+        //Single Round Logic
+        
+
 
     </script>
 </body>
