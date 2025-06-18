@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        console.log("Hello World")
+
+        /*Psuedocode
+        Goal is to create a game played in the console
+        Randomly generate computer choice of rock paper or scissors and assign it as the hand value
+            Generate random integer
+            Assign specific integers to be rock, paper, or scissors
+            Return the hand associated with the generated integer
+        Get user input on their choice of rock paper or scissors and assign it as user hand value
+        Compare the user hand against computer hand
+            Rock > Scissor, Scissor > Paper, Paper > Rock 
+            and vice versa.
+        If relationship is former, print you Win! IF latter, print you lose!
+        Set button to restart and play again. */
+
+        function getrandomInt (max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        let getComputerChoice = getrandomInt(3);
+        console.log(getComputerChoice)
+
+   
+        
+
+
+    </script>
+</body>
+</html>
